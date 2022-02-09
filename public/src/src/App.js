@@ -10,9 +10,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <header>
-          <nav>
            <Navbar/>
-          </nav>
         </header>
         <Routes>
           <Route path = "/" element = {<PostListPage/>}/>
