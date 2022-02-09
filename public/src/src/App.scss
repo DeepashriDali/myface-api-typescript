@@ -1,5 +1,9 @@
+@import "./constants.scss";
+
 .App {
   text-align: center;
+  color:$defaultbackground;
+  background-color: $background;
 }
 
 .App-logo {
