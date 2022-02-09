@@ -20,6 +20,7 @@ export function UserDetailsPage() {
 
     if(user !== undefined){
     userPageContent = <>
+    <img  src={user.coverImageUrl} alt={user.name} />  
     <User user = {user}/>
     <h2> {user.name}'s posts </h2>
     <PostList postList = {user.posts} user = {user}/> 
@@ -30,6 +31,7 @@ export function UserDetailsPage() {
 
     return <main>
         <h1>MyFace - User Page</h1>
+     
         {userPageContent } 
     </main>
 }
