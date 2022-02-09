@@ -1,11 +1,11 @@
 import React from "react";
 import { Post } from "../post/Post";
 
-export function PostList({ postList, user }) {
+export function PostList({ postList}) {
     return <ol>
         {postList.map((post, index) => (
             <li key={index}>
-                <Post post={post} user = {user} />
+                <Post post={post} />
             </li>
         ))}
     </ol>

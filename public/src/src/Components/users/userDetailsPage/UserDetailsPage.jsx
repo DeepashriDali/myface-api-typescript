@@ -13,7 +13,7 @@ export function UserDetailsPage() {
                 .then(response => response.json())
                 .then(userJson => setUser(userJson));
         },
-        [user]
+        [params.userId]
     );
     
     let userPageContent;
