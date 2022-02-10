@@ -4,7 +4,7 @@ import "./User.scss"
 
 export function User({ user, profileClass }) {
     return <div className={`user ${profileClass}`}>
-   
+
     <img className="profilePic" src={user.profileImageUrl} alt={user.name} /> 
     <div className="userInfo">
     <Link to = {`/users/${user.id}`}> <h2>{user.name}</h2> </Link>
