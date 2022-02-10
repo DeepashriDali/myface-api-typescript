@@ -29,7 +29,6 @@
     grid-column: 2/3;
     grid-row: 1/2;
     font-size: $mobile-subtitle;
-    margin:1em;
     justify-self: center;
 }
     p{
@@ -80,6 +79,7 @@ a:active { text-decoration: none;
         justify-content: center;
         align-items: flex-start;
         margin-left: 10vw;
+        padding-left: 4em;
         background-color: $overlay;
         height: 6.5rem;
         width: 100vw;
