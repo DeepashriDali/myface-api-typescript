@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { User } from "../user/User";
 import { PostList } from "../../posts/postList/PostList"
 import { useParams } from "react-router-dom";
+import "./UserDetailsPage.scss"
 
 export function UserDetailsPage() {
     const params = useParams();
@@ -20,9 +21,9 @@ export function UserDetailsPage() {
 
     if(user !== undefined){
     userPageContent = <>
-    <img  src={user.coverImageUrl} alt={user.name} />  
-    <User user = {user}/>
-    <h2> {user.name}'s posts </h2>
+    <img className="coverPic" src={user.coverImageUrl} alt={user.name} />  
+    <User className="userDetailProfile" user = {user}/>
+    <h3> {user.name}'s posts </h3>
     <PostList postList = {user.posts} user = {user}/> 
     </>
     } else {

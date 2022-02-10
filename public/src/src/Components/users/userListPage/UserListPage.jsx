@@ -1,31 +1,56 @@
 import React, { useEffect, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
+import { getUsers } from "../../../Clients/myFaceClients";
 import { UserList } from "../userList/UserList";
-import { useParams } from "react-router-dom";
+import "./UserListPage.scss"
 
 export function UserListPage() {
-    const param = useParams();
     const [userList, setUserList] = useState();
+    const [next, setNext] = useState();
+    const [previous, setPrevious] = useState();
+
+    const [searchParams] = useSearchParams();
+    const pageNumber = searchParams.get("page");
+    const pageSize = searchParams.get("pageSize");
 
     useEffect(
         function() {
-            fetch(`http://localhost:3001/users?page=${param.pageNumber}`)
-                .then(response => response.json())
-                .then(userListJson => setUserList(userListJson.results));
-           
+            getUsers(pageNumber, pageSize)
+                .then(usersPage => {
+                    setUserList(usersPage.results);
+                    setNext(usersPage.next);
+                    setPrevious(usersPage.previous);
+                });
         },
-        [param.userList]
+        [pageNumber, pageSize]
     );
 
+    const nextPrevLinks = <div>
+        {
+            previous
+                ? <Link className="page-arrow" to={previous}>⬅</Link>
+                : <></>
+        }
+        {
+            next
+                ? <Link className="page-arrow" to={next}>➡</Link>
+                : <></>
+        }
+    </div>
 
- 
+    let listElements;
+    if (userList !== undefined) {
+        listElements = <>
+            {/* {nextPrevLinks} */}
+            <UserList userList={userList} />
+            {nextPrevLinks}
+        </>
+    } else {
+        listElements = <p>Loading users...</p>
+    }
 
     return <main>
         <h1>MyFace - Users</h1>
-        {
-            userList !== undefined
-                ? <UserList userList={userList} />
-                : <p>Loading users...</p>
-        }
-        
+        {listElements}
     </main>
 }

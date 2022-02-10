@@ -1,0 +1,90 @@
+@import "../../../constants.scss";
+
+.coverPic{  
+    height: 55vh;
+    width:100vw;
+
+}
+h3{
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: left;
+    margin-left: 0.5rem;
+}
+// .user{
+//     height: 4rem;
+//     box-sizing: border-box;
+//     top: -10vh;
+//     margin: 0;
+//     margin-left:0.5rem;
+//     z-index: 102;
+// }
+ .userDetailProfile{
+    .user{
+
+    background-color: $overlay;
+    }
+ }
+//     .userInfo{
+//         box-sizing: border-box;
+//         position: absolute;
+//         top:68vh;
+//         left:4vw;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: flex-start;
+//         margin-left: 10vw;
+//         background-color: $overlay;
+//         height: 6.5rem;
+//         width: 100vw;
+//     }
+//     .profilePic{
+//         width: 6.5rem;
+//         height: 6.5rem;
+//         border: 0.25rem solid white;
+//         border-radius: 3.5rem;
+//         margin: 0.5rem;
+//         box-sizing: border-box;
+//         position: absolute;
+//         top:67vh;
+//         left:1vw;
+//         z-index: 200;
+//     }
+//     h2{
+//         font-size: $mobile-subtitle;
+//         margin-left: 20vw;
+//         justify-self: left;
+//         font-weight: lighter;
+//         text-decoration: none;
+//         margin-bottom: 1rem;
+//     }
+
+//     p{  
+//         font-size: $mobile-secondary;
+//         margin:0;
+//         margin-left: 20vw;
+//         align-self: left;
+//     }
+//     p.userName{
+//         font-weight: bolder;
+//     }
+    
+//     a:link { 
+//         text-decoration: none;
+//         color: $defaultbackground
+//     }
+//     a:visited { 
+//         text-decoration: none;
+//         color: $defaultbackground 
+//     } 
+//     a:hover { text-decoration: none;
+//         color: $defaultbackground 
+//     }
+//     a:active { text-decoration: none; 
+//         color: $defaultbackground}
+
+
+
+
+
