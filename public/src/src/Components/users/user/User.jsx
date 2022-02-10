@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./User.scss"
 
-export function User({ user }) {
-    return <div className="user">
+export function User({ user, profileClass }) {
+    return <div className={`user ${profileClass}`}>
    
     <img className="profilePic" src={user.profileImageUrl} alt={user.name} /> 
     <div className="userInfo">

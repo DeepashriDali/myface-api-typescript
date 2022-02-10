@@ -22,7 +22,7 @@ export function UserDetailsPage() {
     if(user !== undefined){
     userPageContent = <>
     <img className="coverPic" src={user.coverImageUrl} alt={user.name} />  
-    <User className="userDetailProfile" user = {user}/>
+    <User profileClass="userDetailProfile" user = {user}/>
     <h3> {user.name}'s posts </h3>
     <PostList postList = {user.posts} user = {user}/> 
     </>
