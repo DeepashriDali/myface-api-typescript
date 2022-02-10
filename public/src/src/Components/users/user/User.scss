@@ -60,6 +60,9 @@ a:active { text-decoration: none;
     color: $defaultbackground}
 }
 .userDetailProfile {
+    background-color: inherit;
+    height: 7vh;
+
     .profilePic {
         margin: 0.5rem;
         box-sizing: border-box;

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="user undefined"
+>
+  <img
+    alt="Sam"
+    className="profilePic"
+    src="Image url"
+  />
+  <div
+    className="userInfo"
+  >
+    <a
+      href="/users/undefined"
+      onClick={[Function]}
+    >
+       
+      <h2>
+        Sam
+      </h2>
+       
+    </a>
+    <p
+      className="userName"
+    >
+      deeps
+    </p>
+    <p
+      className="email"
+    >
+      deepa@gmail.com
+       
+    </p>
+  </div>
+</div>
+`;

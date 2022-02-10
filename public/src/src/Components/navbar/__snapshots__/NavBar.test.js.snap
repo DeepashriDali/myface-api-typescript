@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+Array [
+  " ",
+  <div
+    className="head"
+  >
+    <h4
+      className="nav-link logo"
+    >
+      MyFace
+    </h4>
+    <button
+      onClick={[Function]}
+    >
+      Menu
+    </button>
+    <nav
+      className="side-nav"
+    >
+      <a
+        className="nav-link"
+        href="/home"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+      <a
+        className="nav-link"
+        href="/posts"
+        onClick={[Function]}
+      >
+        Posts
+      </a>
+      <a
+        className="nav-link"
+        href="/users"
+        onClick={[Function]}
+      >
+        Users
+      </a>
+      <a
+        className="nav-link"
+        href="/users"
+        onClick={[Function]}
+      >
+        + New User
+      </a>
+    </nav>
+  </div>,
+  " ",
+]
+`;
