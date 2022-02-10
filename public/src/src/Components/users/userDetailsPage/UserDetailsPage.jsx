@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { User } from "../user/User";
+import { Post } from "../../posts/post/Post";
 import { PostList } from "../../posts/postList/PostList"
 import { useParams } from "react-router-dom";
 import "./UserDetailsPage.scss"
@@ -25,6 +26,11 @@ export function UserDetailsPage() {
     <User profileClass="userDetailProfile" user = {user}/>
     <h3> {user.name}'s posts </h3>
     <PostList postList = {user.posts} user = {user}/> 
+    
+    <h3> {user.name}'s Likes </h3>
+    <PostList postList={user.likes}/>
+    <h3> {user.name}'s Dislikes </h3>
+    <PostList postList={user.dislikes}/>
     </>
     } else {
     userPageContent = <p>Loading user</p>
