@@ -5,7 +5,7 @@ import { CreatePostPage } from './Components/posts/createPostPage/CreatePostPage
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from './Components/navbar/Navbar';
 import './App.scss';
-import { CreateUserPage } from './Components/users/user/CreateUserPage';
+import { CreateUserPage } from './Components/users/CreateUserPage/CreateUserPage';
 
 function App() {
   return (

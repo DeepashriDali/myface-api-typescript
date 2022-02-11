@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { createUser } from '../../../Clients/myFaceClients';
+import './CreateUserForm.scss';
 
 export function CreateUserForm(){
     const [user, setUser] = useState();
-    const [profileImageUrl, setImage] = useState();
     const [username, setUsername] = useState();
     const [email, setEmail] = useState();
     const [coverImageUrl, setCoverImage] = useState();
+    const [profileImageUrl, setImage] = useState();
 
-    return <form onSubmit={e => {
+    return <form className="create-user-form" onSubmit={e => {
         e.preventDefault();
         createUser(user, username, email, profileImageUrl, coverImageUrl);
         
