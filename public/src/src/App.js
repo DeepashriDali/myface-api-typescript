@@ -4,6 +4,7 @@ import { UserDetailsPage } from './Components/users/userDetailsPage/UserDetailsP
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from './Components/navbar/Navbar';
 import './App.scss';
+import { CreateUserPage } from './Components/users/user/CreateUserPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/posts" element={<PostListPage/>} />
           <Route path="/users" element={<UserListPage/>} />
           <Route path="/users/:userId" element={<UserDetailsPage/>}/>
+          <Route path="/users/create" element={<CreateUserPage/>}/>
           <Route path="/users?page=:pageNumber" element={<UserListPage/>}/>
         </Routes>
       </div>
