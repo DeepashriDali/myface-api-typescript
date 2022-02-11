@@ -91,3 +91,18 @@ export async function likePost(postId) {
         throw new Error("Could not like post");
     }
 }
+
+export async function dislikePost(postId) {
+    const url = `http://localhost:3001/posts/${postId}/dislike`;
+
+    const response = await fetch(
+        url,
+        {
+            method: "POST",
+        }
+    );
+
+    if (!response.ok) {
+        throw new Error("Could not dislike post");
+    }
+}

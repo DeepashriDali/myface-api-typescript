@@ -1,5 +1,5 @@
 import React from "react";
-import { likePost } from "../../../Clients/myFaceClients";
+import { likePost, dislikePost } from "../../../Clients/myFaceClients";
 import "./Post.scss";
 
 
@@ -12,6 +12,9 @@ export function Post({ post }) {
                 ? <p>Posted by {post.postedBy.name} on {post.createdAt}</p>
                 : <p>Post created on : {post.createdAt}</p>
                 }
-        <button onClick={() => likePost(post.id)}>👍</button>
+        <div className="buttons">
+            <button onClick={() => likePost(post.id)}>👍</button>
+            <button onClick={() => dislikePost(post.id)}>👎</button>
+        </div>
     </div>
 }

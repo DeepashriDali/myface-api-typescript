@@ -7,7 +7,7 @@ export function CreatePostForm (){
     const [message, setMessage] = useState("");
     const [imageUrl, setImageUrl] = useState("");
     
-    return <form onSubmit={e => {
+    return <form className="create-post-page" onSubmit={e => {
             e.preventDefault();
             createPost(message, imageUrl);
             }}>
@@ -17,7 +17,7 @@ export function CreatePostForm (){
             <input id= "message" type="text" name = "message" onChange={e=> setMessage(e.target.value)}/>
             <label htmlFor="imageUrl">Image Url:</label>
             <input id= "imageUrl" type="text" name = "imageUrl" onChange={e=> setImageUrl(e.target.value)}/>
-            <input type= "submit" value= "Submit"/>
+            <input className='submit' type= "submit" value= "Submit"/>
             </form>
 
 

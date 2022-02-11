@@ -19,7 +19,8 @@ let className = clicked ? 'side-nav clicked' : 'side-nav'
             <Link className='nav-link' to="/home">Home</Link>
             <Link className='nav-link' to="/posts">Posts</Link>
             <Link className='nav-link' to="/users">Users</Link>
-            <Link className='nav-link' to="/users">+ New User</Link>
+            <Link className='nav-link' to="/users/create">+ New User</Link>
+            <Link className='nav-link' to="/posts/create">+ New Post</Link>
         </nav>
     </div>
 
