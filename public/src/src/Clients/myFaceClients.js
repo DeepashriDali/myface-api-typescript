@@ -53,3 +53,41 @@ export async function createUser(name, username, email, profileImageUrl, coverIm
         throw new Error('Could not create user');
     }
 }
+
+export async function createPost(message, imageUrl) {
+    const url = "http://localhost:3001/posts/create";
+    const requestBody = {
+        message: message,
+        imageUrl: imageUrl,
+    }
+
+    const response = await fetch(
+        url,
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(requestBody),
+        }
+    );
+
+    if (!response.ok) {
+        throw new Error("Could not create post");
+    }
+}
+
+export async function likePost(postId) {
+    const url = `http://localhost:3001/posts/${postId}/like`;
+
+    const response = await fetch(
+        url,
+        {
+            method: "POST",
+        }
+    );
+
+    if (!response.ok) {
+        throw new Error("Could not like post");
+    }
+}
