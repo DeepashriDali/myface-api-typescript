@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { createUser } from '../../../Clients/myFaceClients';
 import './CreateUserForm.scss';
 
@@ -8,10 +9,12 @@ export function CreateUserForm(){
     const [email, setEmail] = useState();
     const [coverImageUrl, setCoverImage] = useState();
     const [profileImageUrl, setImage] = useState();
+    const navigate = useNavigate();
 
     return <form className="create-user-form" onSubmit={e => {
         e.preventDefault();
         createUser(user, username, email, profileImageUrl, coverImageUrl);
+        navigate('/users', {replace: true});
         
     }} action="">
         <label htmlFor="name">Name</label>

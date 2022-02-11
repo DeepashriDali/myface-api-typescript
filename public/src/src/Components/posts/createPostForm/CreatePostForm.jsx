@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { createPost } from "../../../Clients/myFaceClients";
 
 
@@ -6,10 +7,12 @@ export function CreatePostForm (){
 
     const [message, setMessage] = useState("");
     const [imageUrl, setImageUrl] = useState("");
+    const navigate = useNavigate();
     
     return <form className="create-post-page" onSubmit={e => {
             e.preventDefault();
             createPost(message, imageUrl);
+            navigate("/posts", {replace: true});
             }}>
 
 
