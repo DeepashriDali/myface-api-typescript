@@ -14,7 +14,7 @@ let className = clicked ? 'side-nav clicked' : 'side-nav'
 
     return <div className="head">
         <h4 className='nav-link logo'>MyFace</h4>
-        <button onClick={toggleClick}>Menu</button>
+        <button onClick={toggleClick}>☰</button>
         <nav className={className}>
             <Link className='nav-link' to="/home">Home</Link>
             <Link className='nav-link' to="/posts">Posts</Link>
