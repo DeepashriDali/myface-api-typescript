@@ -2,28 +2,41 @@ import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { User } from "./User";
+import { Link } from "react-router-dom";
 
-test("renders message", () => {
-  // Arrange
+test("renders username", () => {
   const user = {
-    name : "Sam",  
     username: "deeps",
-    profileImageUrl: "Image url",
-    email: "deepa@gmail.com",
-
   };
 
-  // Act
   render(<BrowserRouter><User user={user} /></BrowserRouter>);
   const userElement = screen.getByText(/deeps/i);
-
-  // Assert
   expect(userElement).toBeInTheDocument();
 });
+test("renders name", () => {
+  const user = {
+    name : "Sam",  
+  };
+
+  render(<BrowserRouter><User user={user} /></BrowserRouter>);
+  const nameElement = screen.getByText(/sam/i);
+  expect(nameElement).toBeInTheDocument();
+});
+test("renders profile image", () => {
+  const user = {
+    profileImageUrl: "Image url",
+  };
+
+  render(<BrowserRouter><User user={user} /></BrowserRouter>);
+  const imageElement = screen.getByRole('img', { name: user.name});
+  expect(imageElement).toBeInTheDocument();
+});
+
+
+
 
 test("matches snapshot", () => {
-  // Arrange
-  const user = {
+   const user = {
     name : "Sam",  
     username: "deeps",
     profileImageUrl: "Image url",
@@ -31,12 +44,9 @@ test("matches snapshot", () => {
 
   };
 
-
-  // Act
   const tree = renderer
     .create(<BrowserRouter><User user={user} /></BrowserRouter>)
     .toJSON();
 
-  // Assert
   expect(tree).toMatchSnapshot();
 });
